@@ -4,7 +4,7 @@
     font-weight:lighter;
     text-align: center;
 }
-    */
+  */   
 
 h1[xyz="abc"] {
     color: blue;
@@ -19,8 +19,9 @@ h1[xyz="abc"] {
     text-align: center;
 }
 #heading3 {
-    color: rgb(195, 240, 33);
+    color: rgb(99, 181, 211);
     font-size: 24px;
     font-weight:lighter;
     text-align: center;
 }
+   

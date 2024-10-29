@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom"
+
 const heading = React.createElement("h1",{ id:"heading1", xyz:"abc"}, "Hello React 2nd Time");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
