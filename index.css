@@ -1,0 +1,26 @@
+/*#heading1 {
+    color: blue;
+    font-size: 24px;
+    font-weight:lighter;
+    text-align: center;
+}
+    */
+
+h1[xyz="abc"] {
+    color: blue;
+    font-size: 24px;
+    font-weight:lighter;
+    text-align: center;
+}
+#heading2 {
+    color: red;
+    font-size: 44px;
+    font-weight:lighter;
+    text-align: center;
+}
+#heading3 {
+    color: rgb(195, 240, 33);
+    font-size: 24px;
+    font-weight:lighter;
+    text-align: center;
+}
