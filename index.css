@@ -4,7 +4,7 @@
     font-weight:lighter;
     text-align: center;
 }
-  */   
+   
 
 h1[xyz="abc"] {
     color: blue;
@@ -12,11 +12,12 @@ h1[xyz="abc"] {
     font-weight:lighter;
     text-align: center;
 }
-#heading2 {
+#heading {
     color: red;
     font-size: 44px;
     font-weight:lighter;
     text-align: center;
+    display: block;
 }
 #heading3 {
     color: rgb(99, 181, 211);
@@ -24,4 +25,44 @@ h1[xyz="abc"] {
     font-weight:lighter;
     text-align: center;
 }
-   
+    */ 
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width: 150px;
+}
+.nav-items > ul {
+    font-size: 30px;
+    display: flex;
+    list-style-type: none;
+}
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+}
+.res-card {
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    min-height: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+.search{
+    padding: 10px;
+}
+.res-imgcard{
+    width: 100%;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;  
+}
