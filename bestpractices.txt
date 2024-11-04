@@ -51,3 +51,9 @@ Here are some coding standards and best practices for writing efficient and clea
    - These operators (`??` and `?.`) help manage null or undefined values more cleanly, making code less error-prone and more readable.
 
 By following these standards, you can write cleaner, more efficient JavaScript and TypeScript code that’s easier to maintain and understand!
+
+
+
+# react hooks are regular utility functions
+useState()
+useEffect()
