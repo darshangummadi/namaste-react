@@ -16,7 +16,7 @@ const Body = () => {
 
     const fetchData = async() => {
         const data = await fetch(
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.6287557&lng=79.4191795&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0843007&lng=80.2704622&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
 
         const json = await data.json();
@@ -28,17 +28,18 @@ const Body = () => {
     }
     //this is also not a good way
     //use shimmer UI
-    if(listOfRestaurants.length === 0){
-        return <Shimmer/>;
-    }
+    //conditional rendering
+  //  if(listOfRestaurants.length === 0){
+    //    return <Shimmer/>;
+    //}
 
-    return (
+    return listOfRestaurants.length === 0 ? (<Shimmer/>):(
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" 
                 onClick={() =>{
                     const filteredList = listOfRestaurants.filter(
-                        (res) => res.info.avgRating > 4.2
+                        (res) => res.info.avgRating > 4.5
                     );
                     setListOfRestaturant(filteredList)
                 }}
