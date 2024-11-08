@@ -89,3 +89,7 @@ h1[xyz="abc"] {
     padding:"0 20 px";
     cursor:pointer;
 }
+
+.filter{
+    display: flex;
+}

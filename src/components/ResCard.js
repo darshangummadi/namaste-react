@@ -9,6 +9,7 @@ const ResCard = (props) => {
     if(!resData) return null;
 
     const {cloudinaryImageId, name, cuisines, avgRating, costForTwo} = resData?.info;
+    //console.log(cloudinaryImageId);
 
     return(
         <div className="res-card" style={styleCard}>
@@ -19,6 +20,7 @@ const ResCard = (props) => {
             <h4>{costForTwo}</h4>
         </div>
     )
+    
 };
 
 export default ResCard;
