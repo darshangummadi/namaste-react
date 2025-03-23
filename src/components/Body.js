@@ -2,6 +2,7 @@ import ResCard from "./ResCard.js"
 import {useEffect, useState} from "react";
 import resList from "../utils/mockData.js";
 import Shimmer from "./Shimmer.js";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     //React state variable - super powerful variable
@@ -14,7 +15,6 @@ const Body = () => {
     const [searchRestaurants, setsearchRestaurants] = useState("");
 
     //whenever a state variable updates react triggers a reconciliation cyccle (re renders the component)
-    console.log("Body Rendered");
     
     useEffect(()=>{
         fetchData();
@@ -22,13 +22,13 @@ const Body = () => {
 
     const fetchData = async() => {
         const data = await fetch(
+            //https://corsproxy.io/?
             //"https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0843007&lng=80.2704622&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
             "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
             //"https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.6287557&lng=79.4191795&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
 
         const json = await data.json();
-        console.log(json);
 
         //not a good way to write this type and we can use option chaining
 
@@ -76,7 +76,7 @@ const Body = () => {
             </div>
             <div className="res-container">
                 {filRestaurant.map((restaurant) => (
-                    <ResCard key={restaurant.info.id} resData= {restaurant} /> ))
+                   <Link to={"/restaurants/" + restaurant.info.id} key={restaurant.info.id}> <ResCard resData= {restaurant} /> </Link>))
                 }
             </div>
         </div>
